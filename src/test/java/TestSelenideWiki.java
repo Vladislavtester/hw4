@@ -11,8 +11,8 @@ public class TestSelenideWiki {
         $("[placeholder='Search GitHub']").setValue("selenide").pressEnter();
         $$("ul.repo-list li").first().$("a").click();
         $("#wiki-tab").click();
-        $("#wiki-body").shouldHave(text("Soft assertions"));
-        $(byLinkText("Soft assertions")).click();
+        $(".js-wiki-more-pages-link").click();
+        $(byLinkText("SoftAssertions")).click();
         $("#wiki-body").shouldHave(text("Using JUnit5"));
         sleep(3000);
     }
