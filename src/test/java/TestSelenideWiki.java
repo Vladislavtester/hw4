@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class TestSelenideWiki {
     @Test
-    void Softassertions() {
+    void FindExampleJunit5() {
         open("https://github.com");
         $("[placeholder='Search GitHub']").setValue("selenide").pressEnter();
         $$("ul.repo-list li").first().$("a").click();
